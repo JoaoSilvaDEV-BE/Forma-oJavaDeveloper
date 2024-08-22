@@ -51,19 +51,19 @@ public class ArvoreBinaria<T extends Comparable<T>> {
         if (atual != null) {
             exibirPosOrdem(atual.getNoEsq());
             exibirPosOrdem(atual.getNoDir());
-            System.out.println(atual.getConteudo() + ", ");
+            System.out.print(atual.getConteudo() + ", ");
 
         }
     }
 
     public void exibirPreOrdem() {
-        System.out.println("\n Exibindo pre ordem");
+        System.out.print("\n Exibindo pre ordem");
         exibirPreOrdem(this.raiz);
     }
 
     private void exibirPreOrdem(BinNo<T> atual) {
         if (atual != null) {
-            System.out.println(atual.getConteudo() + ", ");
+            System.out.print(atual.getConteudo() + ", ");
             exibirPreOrdem(atual.getNoEsq());
             exibirPreOrdem(atual.getNoDir());
 
@@ -87,7 +87,7 @@ public class ArvoreBinaria<T extends Comparable<T>> {
             }
 
             if (atual == null) {
-                System.out.println("Conteudo nao encontrado. Bloco try");
+                System.out.print("Conteudo nao encontrado. Bloco try");
             }
 
             if (pai == null) {
@@ -142,7 +142,7 @@ public class ArvoreBinaria<T extends Comparable<T>> {
             }
 
         } catch (NullPointerException erro) {
-            System.out.println("Conteudo nao encontrado. Bloco Catch");
+            System.out.print("Conteudo nao encontrado. Bloco Catch");
         }
     }
 
