@@ -1,4 +1,4 @@
-package one.digitalInovation;
+package stack.src.carros;
 
 import java.util.Objects;
 
@@ -20,12 +20,10 @@ public class Carro {
 
     @Override
     public boolean equals(Object o) {
-        if (o == this) {
+        if (this == o)
             return true;
-        }
-        if (!(o instanceof Carro)) {
+        if (o == null || getClass() != o.getClass())
             return false;
-        }
         Carro carro = (Carro) o;
         return Objects.equals(marca, carro.marca);
     }
@@ -33,6 +31,11 @@ public class Carro {
     @Override
     public int hashCode() {
         return Objects.hash(marca);
+    }
+
+    @Override
+    public String toString() {
+        return "Carro [marca=" + marca + "]";
     }
 
 }
